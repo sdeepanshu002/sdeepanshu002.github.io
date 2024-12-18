@@ -41,24 +41,28 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+  backdrop-filter: blur(8px); /* Blurred background */
   padding: 10px 0;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
   z-index: 1000;
+  border-bottom: 2px solid #444;
 }
 
 .nav-button {
   color: white;
   font-size: 18px;
-  padding: 10px;
+  padding: 12px 20px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  background-color: #ff3d3d; /* Red background */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-button:hover {
-  background-color: #ff3d3d;
+  background-color: #ff6464; /* Light red background */
+  transform: scale(1.1); /* Slight zoom effect on hover */
 }
 
 h1 {
