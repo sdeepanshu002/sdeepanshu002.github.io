@@ -1,4 +1,4 @@
-/* General reset for consistency */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,133 +7,162 @@
 
 /* Body Styling */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
   line-height: 1.6;
-  transition: background-color 0.5s ease;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Link Styling */
+a {
+  color: #f44336; /* Red color for links */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #000;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Align the navigation items to the right */
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+  position: relative;
+}
+
+/* Navigation Links */
+nav ul li a {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+/* Hover Effects on Navigation Links */
+nav ul li a:hover {
+  background-color: #f44336;
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Header Styling */
 header {
-  background-color: #2d3e50;
-  color: #fff;
-  padding: 20px;
   text-align: center;
-  animation: fadeIn 2s ease-in-out;
+  padding: 40px 0;
+  background-color: #000;
 }
 
 header h1 {
   margin-bottom: 10px;
+  font-size: 3rem;
+  color: #f44336;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  animation: fadeIn 2s ease-in-out;
 }
 
 header h2 {
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.5rem;
+  color: #ddd;
 }
 
 /* Section Styling */
 section {
-  margin: 20px;
-  animation: slideUp 1s ease-out;
+  padding: 40px 20px;
+  margin: 20px 0;
+  background-color: #1d1d1d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Skills Section Styling */
-.skills ul {
+/* Hover Effects for Sections */
+section:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Section Headers */
+section h3 {
+  font-size: 2rem;
+  color: #f44336;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Lists Inside Sections */
+section ul {
   list-style-type: none;
+  padding-left: 20px;
 }
 
-.skills li {
-  background-color: #ddd;
-  padding: 5px 10px;
-  margin: 5px;
-  display: inline-block;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
+section li {
+  margin: 10px 0;
 }
 
-.skills li:hover {
-  transform: scale(1.1);
-}
-
-/* Projects Section Styling */
+/* Projects Styling */
 .projects-list {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  justify-content: space-around;
 }
 
 .project {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #333;
+  border-radius: 8px;
   padding: 20px;
   width: 30%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 20px;
 }
 
 .project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Button Styling */
-button {
-  background-color: #2d3e50;
-  color: white;
-  font-size: 1rem;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-block;
-  margin: 10px 0;
-}
-
-/* Hover Effects */
-button:hover {
-  background-color: #4a5b72;
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-/* Button Active Effects */
-button:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Button Focus Effects */
-button:focus {
-  outline: none;
-  border: 2px solid #4a5b72;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
 }
 
 /* Footer Styling */
 footer {
-  background-color: #2d3e50;
+  background-color: #000;
   color: #fff;
   text-align: center;
   padding: 10px;
   position: fixed;
   width: 100%;
   bottom: 0;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Keyframes for Fade-in and Slide-up Animations */
+/* Animation for Fade In Effects */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -141,5 +170,63 @@ footer {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Scroll Up Button (Home) */
+#home-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#home-btn:hover {
+  background-color: #e53935;
+  transform: translateY(-5px);
+}
+
+#home-btn:focus {
+  outline: none;
+}
+
+/* Scroll Animations for Sections */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply Slide Animation to Sections */
+section {
+  animation: slideIn 1s ease-out;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .projects-list {
+    flex-direction: column;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
