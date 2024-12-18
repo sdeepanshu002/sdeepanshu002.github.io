@@ -6,14 +6,14 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #1a1a1a;
+  background-color: #121212;  /* Darker background for better contrast */
   color: white;
   line-height: 1.6;
 }
 
 header {
   background-color: #111;
-  color: #e31b23;
+  color: #e31b23;  /* Red for header text */
   padding: 20px;
   text-align: center;
 }
@@ -26,13 +26,14 @@ header h1 {
 header h2 {
   font-weight: normal;
   font-size: 1.5em;
-  color: #aaa;
+  color: #ddd;  /* Slightly lighter grey for subheader */
 }
 
 .navbar {
   display: flex;
   justify-content: flex-end;
   padding: 10px 20px;
+  background-color: #111;
 }
 
 .nav-button {
@@ -55,6 +56,8 @@ section {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  background-color: #1a1a1a;  /* Dark background for sections */
+  border-radius: 10px;
 }
 
 section.visible {
@@ -64,9 +67,9 @@ section.visible {
 
 h3 {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 20px;
-  color: #e31b23;
+  color: #e31b23;  /* Red color for section headers */
 }
 
 .project {
@@ -77,13 +80,13 @@ h3 {
 }
 
 .project h4 {
-  color: #e31b23;
+  color: #e31b23;  /* Red color for project titles */
 }
 
 footer {
   background-color: #111;
   text-align: center;
-  color: #aaa;
+  color: #aaa;  /* Light grey text in footer */
   padding: 10px;
   position: fixed;
   width: 100%;
