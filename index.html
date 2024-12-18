@@ -19,7 +19,8 @@
     nav ul {
       list-style-type: none;
       padding: 0;
-      text-align: right; /* Align the navigation items to the right */
+      display: flex;
+      justify-content: flex-end; /* Align the navigation items to the right */
     }
 
     nav ul li {
@@ -40,34 +41,6 @@
       border-radius: 5px;
     }
 
-    /* Home Button Styling */
-    .home-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #333;
-      color: white;
-      padding: 15px 30px;
-      font-size: 16px;
-      border-radius: 50px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      transition: background-color 0.3s ease;
-    }
-
-    .home-button:hover {
-      background-color: #575757;
-    }
-
-    section {
-      padding: 40px 20px;
-      margin: 20px 0;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
     /* Sticky Navbar to stay on top */
     header {
       text-align: center;
@@ -80,6 +53,15 @@
     header h2 {
       font-weight: normal;
     }
+
+    section {
+      padding: 40px 20px;
+      margin: 20px 0;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
   </style>
 </head>
 <body>
@@ -87,6 +69,7 @@
   <!-- Navigation Bar -->
   <nav>
     <ul>
+      <li><a href="#top">Home</a></li>
       <li><a href="#professional-summary">Professional Summary</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#achievements">Achievements</a></li>
@@ -195,11 +178,6 @@
   <footer>
     <p>Created with 💻 by Deepanshu Sharma</p>
   </footer>
-
-  <!-- Home Button -->
-  <a href="#top">
-    <button class="home-button">Home</button>
-  </a>
 
   <script src="public/js/app.js"></script>
 </body>
