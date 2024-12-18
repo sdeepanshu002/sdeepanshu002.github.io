@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,58 +7,147 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #121212;  /* Darker background for better contrast */
-  color: white;
   line-height: 1.6;
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #ff3d3d;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff6464;
+}
+
+/* Header Styles */
 header {
-  background-color: #111;
-  color: #e31b23;  /* Red for header text */
-  padding: 20px;
+  background-color: #1a1a1a;
   text-align: center;
-}
-
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-header h2 {
-  font-weight: normal;
-  font-size: 1.5em;
-  color: #ddd;  /* Slightly lighter grey for subheader */
+  padding: 50px 0;
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
   display: flex;
   justify-content: flex-end;
-  padding: 10px 20px;
-  background-color: #111;
+  gap: 20px;
+  z-index: 1000;
 }
 
 .nav-button {
-  color: #fff;
-  background-color: #111;
-  padding: 10px 20px;
-  margin: 5px;
-  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: #e31b23;
+  background-color: #ff3d3d;
 }
 
+h1 {
+  color: #ff3d3d;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Section Styles */
 section {
-  padding: 60px 20px;
-  margin: 40px 0;
+  padding: 80px 20px;
+  margin-top: 50px;
+}
+
+.intro {
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.8;
+}
+
+.project {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project h4 {
+  color: #ff6464;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project p {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Achievements Styles */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+ul li strong {
+  color: #ff3d3d;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 20px;
+  color: #ddd;
+}
+
+/* Hover Effect on Sections */
+section {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
-  background-color: #1a1a1a;  /* Dark background for sections */
-  border-radius: 10px;
 }
 
 section.visible {
@@ -65,39 +155,23 @@ section.visible {
   transform: translateY(0);
 }
 
-h3 {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #e31b23;  /* Red color for section headers */
-}
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.project {
-  background-color: #333;
-  padding: 15px;
-  margin: 15px;
-  border-radius: 8px;
-}
+  .nav-button {
+    font-size: 16px;
+    padding: 8px;
+  }
 
-.project h4 {
-  color: #e31b23;  /* Red color for project titles */
-}
+  h1 {
+    font-size: 2.5rem;
+  }
 
-footer {
-  background-color: #111;
-  text-align: center;
-  color: #aaa;  /* Light grey text in footer */
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-a {
-  color: #e31b23;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  h2 {
+    font-size: 1.2rem;
+  }
 }
