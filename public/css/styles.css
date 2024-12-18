@@ -7,6 +7,8 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  line-height: 1.6;
+  transition: background-color 0.5s ease;
 }
 
 header {
@@ -14,6 +16,7 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 header h1 {
@@ -22,10 +25,12 @@ header h1 {
 
 header h2 {
   font-weight: normal;
+  font-size: 1.2em;
 }
 
 section {
   margin: 20px;
+  animation: slideUp 1s ease-out;
 }
 
 .skills ul {
@@ -34,21 +39,37 @@ section {
 
 .skills li {
   background-color: #ddd;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 5px;
   display: inline-block;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
+
+.skills li:hover {
+  transform: scale(1.1);
 }
 
 .projects-list {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .project {
   background-color: #fff;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 20px;
   width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -59,4 +80,24 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
