@@ -15,15 +15,18 @@
       width: 100%;
       z-index: 100;
     }
+
     nav ul {
       list-style-type: none;
       padding: 0;
-      text-align: center;
+      text-align: right; /* Align the navigation items to the right */
     }
+
     nav ul li {
       display: inline;
       margin: 0 20px;
     }
+
     nav ul li a {
       color: white;
       text-decoration: none;
@@ -31,10 +34,32 @@
       padding: 10px 20px;
       transition: background-color 0.3s ease;
     }
+
     nav ul li a:hover {
       background-color: #575757;
       border-radius: 5px;
     }
+
+    /* Home Button Styling */
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: white;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #575757;
+    }
+
     section {
       padding: 40px 20px;
       margin: 20px 0;
@@ -42,9 +67,23 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
+
+    /* Sticky Navbar to stay on top */
+    header {
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-weight: normal;
+    }
   </style>
 </head>
 <body>
+
   <!-- Navigation Bar -->
   <nav>
     <ul>
@@ -58,7 +97,7 @@
   </nav>
 
   <!-- Header -->
-  <header>
+  <header id="top">
     <h1>Deepanshu Sharma</h1>
     <h2>B.Tech CSE, Final Year</h2>
     <p>Phone: 7385061843 | Email: <a href="mailto:sdeepanshu002@gmail.com">sdeepanshu002@gmail.com</a> | <a href="https://www.linkedin.com/in/deepanshu-sharma-3621a921b" target="_blank">LinkedIn Profile</a></p>
@@ -156,6 +195,11 @@
   <footer>
     <p>Created with 💻 by Deepanshu Sharma</p>
   </footer>
+
+  <!-- Home Button -->
+  <a href="#top">
+    <button class="home-button">Home</button>
+  </a>
 
   <script src="public/js/app.js"></script>
 </body>
