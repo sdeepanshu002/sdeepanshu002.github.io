@@ -8,8 +8,8 @@
 /* Body Styling */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: #fff;
+  background-color: #121212; /* Black background */
+  color: #fff; /* White text */
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -24,13 +24,13 @@ a {
 }
 
 a:hover {
-  color: #fff;
+  color: #fff; /* White on hover */
   transform: scale(1.1);
 }
 
 /* Navigation Bar */
 nav {
-  background-color: #000;
+  background-color: #000; /* Black background for navbar */
   padding: 15px;
   position: sticky;
   top: 0;
@@ -55,7 +55,7 @@ nav ul li {
 
 /* Navigation Links */
 nav ul li a {
-  color: #fff;
+  color: #fff; /* White color for nav items */
   font-size: 18px;
   padding: 10px 20px;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -65,7 +65,7 @@ nav ul li a {
 
 /* Hover Effects on Navigation Links */
 nav ul li a:hover {
-  background-color: #f44336;
+  background-color: #f44336; /* Red background on hover */
   transform: translateY(-5px); /* Lift effect */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
@@ -74,13 +74,13 @@ nav ul li a:hover {
 header {
   text-align: center;
   padding: 40px 0;
-  background-color: #000;
+  background-color: #000; /* Black background */
 }
 
 header h1 {
   margin-bottom: 10px;
   font-size: 3rem;
-  color: #f44336;
+  color: #f44336; /* Red color for header text */
   text-transform: uppercase;
   letter-spacing: 5px;
   animation: fadeIn 2s ease-in-out;
@@ -96,7 +96,7 @@ header h2 {
 section {
   padding: 40px 20px;
   margin: 20px 0;
-  background-color: #1d1d1d;
+  background-color: #1d1d1d; /* Dark grey background */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -111,7 +111,7 @@ section:hover {
 /* Section Headers */
 section h3 {
   font-size: 2rem;
-  color: #f44336;
+  color: #f44336; /* Red color for section headings */
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -136,7 +136,7 @@ section li {
 }
 
 .project {
-  background-color: #333;
+  background-color: #333; /* Dark grey background for project cards */
   border-radius: 8px;
   padding: 20px;
   width: 30%;
@@ -151,7 +151,7 @@ section li {
 
 /* Footer Styling */
 footer {
-  background-color: #000;
+  background-color: #000; /* Black background */
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -178,7 +178,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #f44336;
+  background-color: #f44336; /* Red color for home button */
   color: #fff;
   padding: 10px 15px;
   border: none;
@@ -190,7 +190,7 @@ footer {
 }
 
 #home-btn:hover {
-  background-color: #e53935;
+  background-color: #e53935; /* Darker red on hover */
   transform: translateY(-5px);
 }
 
