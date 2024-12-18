@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
+
+// Home button scroll to top functionality
 document.getElementById("home-btn").addEventListener("click", function() {
   window.scrollTo({
     top: 0,
