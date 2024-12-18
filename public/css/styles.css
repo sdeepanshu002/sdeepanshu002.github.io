@@ -1,232 +1,137 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body Styling */
+/* Global Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #121212; /* Black background */
-  color: #fff; /* White text */
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  transition: background-color 0.5s ease-in-out;
+  background-color: #121212;
+  color: #ffffff;
 }
 
-/* Link Styling */
-a {
-  color: #f44336; /* Red color for links */
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
+h1, h2, h3, h4 {
+  color: #ff0000;
+  text-align: center;
 }
 
-a:hover {
-  color: #fff; /* White on hover */
-  transform: scale(1.1);
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
 }
 
 /* Navigation Bar */
-nav {
-  background-color: #000; /* Black background for navbar */
-  padding: 15px;
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #000;
+  padding: 10px 50px;
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 100;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Navigation Menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: flex-end; /* Align the navigation items to the right */
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 20px;
-  position: relative;
-}
-
-/* Navigation Links */
-nav ul li a {
-  color: #fff; /* White color for nav items */
-  font-size: 18px;
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
   padding: 10px 20px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #ff0000;
   border-radius: 5px;
 }
 
-/* Hover Effects on Navigation Links */
-nav ul li a:hover {
-  background-color: #f44336; /* Red background on hover */
-  transform: translateY(-5px); /* Lift effect */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Header Styling */
+/* Header */
 header {
+  background: linear-gradient(45deg, #000, #ff0000);
+  padding: 50px;
   text-align: center;
-  padding: 40px 0;
-  background-color: #000; /* Black background */
 }
 
 header h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
   margin-bottom: 10px;
-  font-size: 3rem;
-  color: #f44336; /* Red color for header text */
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  animation: fadeIn 2s ease-in-out;
 }
 
 header h2 {
-  font-weight: normal;
-  font-size: 1.5rem;
-  color: #ddd;
-}
-
-/* Section Styling */
-section {
-  padding: 40px 20px;
-  margin: 20px 0;
-  background-color: #1d1d1d; /* Dark grey background */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Hover Effects for Sections */
-section:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
-}
-
-/* Section Headers */
-section h3 {
   font-size: 2rem;
-  color: #f44336; /* Red color for section headings */
+  font-weight: 400;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
   margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Lists Inside Sections */
-section ul {
-  list-style-type: none;
-  padding-left: 20px;
+.project, .education, ul {
+  margin-bottom: 30px;
 }
 
-section li {
+.project h4 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Skills List */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
   margin: 10px 0;
 }
 
-/* Projects Styling */
-.projects-list {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.project {
-  background-color: #333; /* Dark grey background for project cards */
-  border-radius: 8px;
-  padding: 20px;
-  width: 30%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
-  background-color: #000; /* Black background */
-  color: #fff;
   text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  background-color: #000;
+  color: #ffffff;
 }
 
-/* Animation for Fade In Effects */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+footer p {
+  font-size: 1.2rem;
 }
 
-/* Scroll Up Button (Home) */
-#home-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #f44336; /* Red color for home button */
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  font-size: 1.5rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-#home-btn:hover {
-  background-color: #e53935; /* Darker red on hover */
-  transform: translateY(-5px);
-}
-
-#home-btn:focus {
-  outline: none;
-}
-
-/* Scroll Animations for Sections */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Apply Slide Animation to Sections */
+/* Scroll Animations */
 section {
-  animation: slideIn 1s ease-out;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Media Queries for Responsive Design */
+section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
-  .projects-list {
-    flex-direction: column;
+  .navbar {
+    padding: 10px;
   }
 
-  .project {
-    width: 100%;
+  .navbar a {
+    font-size: 1rem;
   }
 
-  nav ul {
-    flex-direction: column;
-    justify-content: flex-start;
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h2 {
+    font-size: 1.5rem;
   }
 }
