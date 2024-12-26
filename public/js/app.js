@@ -1,35 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Portfolio page loaded!");
+const carousel = document.querySelector('.carousel');
+let isMouseDown = false;
+let startX;
+let scrollLeft;
 
-  // Add smooth scroll for anchor links
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  // Add fade-in effect to sections as they come into view
-  const sections = document.querySelectorAll('section');
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
+// Mouse Events for dragging the carousel
+carousel.addEventListener('mousedown', (e) => {
+    isMouseDown = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+    carousel.style.cursor = 'grabbing'; // Change cursor to grabbing
 });
 
-// Home button scroll to top functionality
-document.getElementById("home-btn").addEventListener("click", function() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+carousel.addEventListener('mouseleave', () => {
+    isMouseDown = false;
+    carousel.style.cursor = 'grab'; // Reset cursor when mouse leaves
+});
+
+carousel.addEventListener('mouseup', () => {
+    isMouseDown = false;
+    carousel.style.cursor = 'grab'; // Reset cursor on mouseup
+});
+
+carousel.addEventListener('mousemove', (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2; // Scroll speed multiplier
+    carousel.scrollLeft = scrollLeft - walk;
+});
+
+// Touch Events for Mobile Devices
+carousel.addEventListener('touchstart', (e) => {
+    isMouseDown = true;
+    startX = e.touches[0].pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+    carousel.style.cursor = 'grabbing';
+});
+
+carousel.addEventListener('touchend', () => {
+    isMouseDown = false;
+    carousel.style.cursor = 'grab'; // Reset cursor on touchend
+});
+
+carousel.addEventListener('touchmove', (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 2;
+    carousel.scrollLeft = scrollLeft - walk;
 });
