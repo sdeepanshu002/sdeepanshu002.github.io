@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
@@ -6,176 +6,200 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #121212;
-  color: #e0e0e0;
-  padding: 0;
-  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background: #6b6969; /* Dark background */
+  color: #fff; /* White text for contrast */
+  scroll-behavior: smooth; /* Smooth scrolling */
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Helvetica Neue', sans-serif;
-  color: #fff;
-}
-
-a {
-  text-decoration: none;
-  color: #ff3d3d;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #ff6464;
-}
-
-/* Header Styles */
-header {
-  background-color: #1a1a1a;
-  text-align: center;
-  padding: 50px 0;
-}
-
+/* Navbar Styling */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
-  backdrop-filter: blur(8px); /* Blurred background */
-  padding: 10px 0;
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
+  background: #6b6969;
+  backdrop-filter: blur(10px); /* Blurred background effect */
   z-index: 1000;
-  border-bottom: 2px solid #444;
 }
 
-.nav-button {
-  color: white;
-  font-size: 18px;
-  padding: 12px 20px;
-  border-radius: 5px;
-  background-color: #ff3d3d; /* Red background */
-  transition: background-color 0.3s ease, transform 0.2s ease;
+/* Logo Styling */
+.navbar .logo img {
+  height: 60px;
 }
 
-.nav-button:hover {
-  background-color: #ff6464; /* Light red background */
-  transform: scale(1.1); /* Slight zoom effect on hover */
+/* Navigation Links */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff; /* White text for navbar links */
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff3333; /* Red hover effect */
+  transform: scale(1.1); /* Slight scale-up on hover */
+}
+
+/* Styling for Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #6b6969; /* Blurred background effect */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo img {
+    max-height: 80px; /* Set the max height to maintain proportions */
+    width: auto; /* Ensure the aspect ratio is maintained */
+}
+
+/* Navbar Menu Styling */
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+nav ul li a:hover {
+    color: #f1c40f; /* Gold color on hover */
+}
+
+/* Section Styling */
+section {
+  padding: 100px 20px;
+  margin-top: 60px; /* To offset the navbar */
+  background: linear-gradient(135deg, #544b4b, #d64242, #fe0000); /* Gradient for sections */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: #ff3d3d;
-  font-size: 3rem;
-  margin: 20px 0;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-
-/* Section Styles */
-section {
-  padding: 80px 20px;
-  margin-top: 50px;
-}
-
-.intro {
   text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+  color: #fff; /* White color for headings */
 }
 
-h3 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+/* Section Paragraphs */
+section p {
+  text-align: center;
+  font-size: 18px;
+  color: #ddd; /* Light gray text for paragraphs */
+}
+
+/* Adding padding and margin for sections */
+#home, #about, #projects, #achievements, #skills, #contact {
+  margin-bottom: 50px;
+}
+
+/* Make the text in the sections more readable */
+section h1, section p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+/* Styling for Project Section */
+#projects {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #544b4b, #d64242, #fe0000);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
   color: #fff;
 }
 
-p {
-  font-size: 1rem;
-  color: #ddd;
-  line-height: 1.8;
+/* Enable horizontal scrolling */
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;  /* Make the carousel horizontally scrollable */
+  display: flex;  /* Ensure the carousel items are laid out horizontally */
+  margin: 0 auto;
+  scroll-snap-type: x mandatory; /* Optional: for smoother snapping */
 }
 
-.project {
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+/* Scroll snapping for smooth transitions between projects */
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+  scroll-snap-type: x mandatory; /* Ensure smooth scrolling between items */
+}
+
+.project-container {
+  flex: 0 0 auto;  /* Items should not shrink and should take as much space as they need */
+  width: 40%;  /* Ensures each project takes the full width */
+  scroll-snap-align: start; /* Snaps the items to the start when scrolling */
+  padding: 50px;
+  background-color: #222; /* Dark background for each project */
+  margin-right: 10px; /* Space between projects */
   border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+/* Add hover effect for project containers */
+.project-container:hover {
+  transform: scale(1.25);
 }
 
-.project h4 {
-  color: #ff6464;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+/* Styling for the Navigation Buttons */
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
 }
 
-.project p {
-  color: #ddd;
-  font-size: 1rem;
+.prev-btn {
+  left: 10px;
 }
 
-/* Achievements Styles */
-ul {
-  list-style: none;
-  padding-left: 0;
+.next-btn {
+  right: 10px;
 }
 
-ul li {
-  padding: 10px 0;
-  font-size: 1rem;
-  color: #ddd;
-}
-
-ul li strong {
-  color: #ff3d3d;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #1a1a1a;
-  text-align: center;
-  padding: 20px;
-  color: #ddd;
-}
-
-/* Hover Effect on Sections */
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-button {
-    font-size: 16px;
-    padding: 8px;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
+/* Styling for hover effect on buttons */
+button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
